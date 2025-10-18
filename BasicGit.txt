@@ -1,0 +1,82 @@
+Basic Git - Catatan Singkat untuk Pemula
+
+1) Konfigurasi awal
+git config --global user.name "Nama Kamu"
+git config --global user.email "email@domain.com"
+git config --global core.editor "code --wait"    # contoh VS Code
+
+2) Memulai repository
+git init                       # buat repo lokal
+git clone <url>                # salin repo remote
+
+3) Status dan perubahan
+git status                     # lihat perubahan
+git diff                       # lihat beda file yang belum staged
+git add <file>                 # tambahkan ke staging
+git add .                      # tambahkan semua perubahan
+git reset <file>               # hapus dari staging
+git restore <file>             # batalkan perubahan kerja (git 2.23+)
+
+4) Commit
+git commit -m "Pesan ringkas menjelaskan perubahan"
+git commit --amend             # gabung dengan commit terakhir (jangan pakai setelah push)
+Tips: pesan commit: ringkas baris pertama (<50), kosongkan baris kedua, lalu deskripsi.
+
+5) Cabang (branch)
+git branch                     # lihat daftar branch
+git branch <nama>              # buat branch baru
+git switch <nama>              # pindah branch (alternatif: git checkout <nama>)
+git switch -c <nama>           # buat dan pindah
+git merge <nama>               # merge branch ke branch sekarang
+
+6) Remote dan sinkronisasi
+git remote add origin <url>
+git remote -v
+git fetch                      # ambil update remote tanpa merge
+git pull                       # fetch + merge (atau git pull --rebase)
+git push -u origin <branch>    # push pertama kali + set upstream
+git push                       # push perubahan
+
+7) Riwayat dan navigasi
+git log                        # lihat riwayat
+git log --oneline --graph --all
+git show <commit>              # lihat detail commit
+git checkout <commit>          # pindah ke commit (detached HEAD)
+
+8) Mengembalikan perubahan
+git restore --staged <file>    # keluarkan file dari staging
+git reset --soft HEAD~1        # batalkan commit tapi simpan perubahan pada staging
+git reset --hard HEAD~1        # HATI-HATI: hapus commit dan perubahan kerja
+git revert <commit>            # buat commit pembatalan (aman untuk remote)
+
+9) Konflik merge
+- Saat konflik: buka file, cari tanda <<<<====, selesaikan, lalu:
+git add <file>
+git commit
+
+10) Stash (simpan sementara)
+git stash                      # simpan perubahan kerja sementara
+git stash pop                  # kembalikan terakhir disimpan
+git stash list
+
+11) .gitignore
+- Tambahkan file/ pola yang tidak mau di-track di .gitignore
+Contoh:
+node_modules/
+*.log
+.env
+
+12) Tag
+git tag v1.0.0
+git push origin v1.0.0
+
+13) Tips praktis
+- Commit sering dengan pesan jelas.
+- Gunakan branch untuk fitur/bug fix.
+- Review perubahan (git diff, git log) sebelum push.
+- Jangan force-push ke branch bersama tanpa koordinasi: git push --force-with-lease jika perlu.
+
+Referensi singkat perintah yang sering dipakai:
+init, clone, status, add, commit, log, branch, switch/checkout, merge, fetch, pull, push, stash, reset, revert, diff, tag
+
+Gunakan file ini sebagai cheat-sheet ketika belajar Git. Praktikkan dengan repositori kecil untuk memahami alur kerja.
