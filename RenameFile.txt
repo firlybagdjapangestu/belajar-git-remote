@@ -1,0 +1,11 @@
+5beba46 (HEAD -> master) Belajar Menghapus
+8ce7c0c latihan dari pak eko
+a99da49 Mengetes perubahan pada file
+15540d9 Menambahkan snapshoot 3
+ee84ffe Menambahkan snapshoot 2
+8bfa844 Menambahkan file ke repo
+
+
+git diff 8bfa844 HEAD
+
+git difftool 8ce7c0c 5beba46
