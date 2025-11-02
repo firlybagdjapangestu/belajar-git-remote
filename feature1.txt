@@ -3,3 +3,4 @@ apakah akan conflict ?
 Mencoba feature cherry pick 1
 Mencoba stash 
 mencoba rebase
+mencoba feature merge squash
