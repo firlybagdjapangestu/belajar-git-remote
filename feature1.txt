@@ -2,3 +2,4 @@ sedang mencoba conflict
 apakah akan conflict ?
 Mencoba feature cherry pick 1
 Mencoba stash 
+mencoba rebase
