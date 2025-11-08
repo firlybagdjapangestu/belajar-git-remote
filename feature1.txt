@@ -6,3 +6,4 @@ mencoba rebase
 mencoba feature merge squash
 
 mencoba pull request lagi
+apakah akan terjadi conflict
