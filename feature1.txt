@@ -1,1 +1,3 @@
 sedang mencoba conflict
+
+coba ubah untuk push ke remote
