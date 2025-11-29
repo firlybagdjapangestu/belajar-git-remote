@@ -4,3 +4,4 @@
 [submodule "modul"]
 	path = modul
 	url = git@github.com:firlybagdjapangestu/belajar-git-submodule.git
+	branch = release
